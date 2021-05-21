@@ -1,0 +1,47 @@
+
+
+
+#form{
+    width: 80%;
+   
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+   padding:20px;
+    margin-bottom: 70px;
+    background-color: black;
+    color:white;
+    border-radius: 20px;
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: #94c3e9;
+
+}
+#submit {
+    margin-left: 60px;
+    width: 60%;
+    height: 35px;
+    background: aquamarine;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: larger;
+    font-family: monospace;
+}
+#title{
+    margin-left: 60px;
+    font-size: large;
+    font-family: monospace;
+}
+#input{
+    width: 70%;
+    
+    border:none;
+    outline: none;
+    padding-left: 15px;
+    margin-left: 60px;
+}
+
+
