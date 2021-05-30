@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div id="title"> Said epicerie
+</div>
+<br>
+<br>
+<br>
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <p> Est-ce que vous etez allergique aux noix?</h1>
+        <input type="radio" id="no-noix"  name="noix" onchange="populateListProductChoices('displayProduct')">
+        <label for="yes">oui</label>
+        <input type="radio" id="noix"   name="noix" onchange="populateListProductChoices('displayProduct')">
+        <label for="no">non</label>
+  <br>
+  <p> Est-ce que vous etez intolérant au lactose?</h1>
+        <input type="radio" id= "no-lactose" name = "lactose"  onchange="populateListProductChoices('displayProduct')">
+        <label for="yes">oui</label>
+        <input type="radio" id= "lactose" name = "lactose"  onchange="populateListProductChoices('displayProduct')">
+        <label for="no">non</label>
+  <br>
+  <p> Est-ce que vous preferez les produits organiques?</h1>
+        <input type="radio" id="organic" name = "organic" onchange="populateListProductChoices('displayProduct')">
+        <label for="yes">oui</label>
+        <input type="radio" id="no-organic" name = "organic"  onchange="populateListProductChoices('displayProduct')">
+        <label for="no">non</label>
+
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+<footer id ="footer"> <p id="txt-footer">this website is developed by 3chiri moumou</p>
+    </footer>
+</html>
