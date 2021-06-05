@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div id="title"> Said epicerie
+</div>
+<br>
+<br>
+
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+function changeFont(value){
+  console.log(value);
+  document.querySelector("body").style.fontSize = value;
+  document.querySelector("a").style.fontSize = value;
+  Array.from(document.querySelectorAll("#sp")).forEach((link) => {
+      link.style.fontSize = value;
+  });
+  Array.from(document.querySelectorAll(".nav-link")).forEach((link) => {
+      link.style.fontSize = value;
+  });
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<div class="tab">
+  <span style="font-size:30px;cursor:pointer;color:white;margin-left:20px;font-size: 40px;cursor: pointer;color: white;margin-left: 20px;padding-right: 30px;
+  border-right: 1px solid white;
+    top: 0;
+}" onclick="openNav()">&#9776; </span>
+  
+</div>
+
+<!-- Tab content -->
+<div id="koulchi">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="nav-link"style="cursor:pointer;" onclick="openInfo(event, 'Client')">Profile</a>
+  <a class="nav-link" style="cursor:pointer;" onclick="openInfo(event, 'Products')">Produits</a>
+  <a class="nav-link" style="cursor:pointer;" onclick="openInfo(event, 'Cart')">Panier</a>
+</div>
+<div id="Client" class="tabcontent">
+<!-- inspired from https://codepen.io/Metty/pen/MWjOavR -->
+<p> Veuillez indiquer vos préférences d'aliments pour améliorer vos courses alimentaires.</p>
+<br>
+
+  <div class="wrapper">
+ <input type="radio" name="noix" id="option-1" class="noix" onchange="populateListProductChoices('displayProduct')" checked>
+ <input type="radio" name="noix" id="option-2" class="no-noix" onchange="populateListProductChoices('displayProduct')">
+   <label for="option-1" class="option option-1">
+     <div class="dot"></div>
+      <span id="sp">noix</span>
+      </label>
+   <label for="option-2" class="option option-2">
+     <div class="dot"></div>
+      <span id="sp">sans noix</span>
+   </label>
+</div>
+<br>
+<br>
+<div class="wrapper">
+ <input type="radio" name="lactose" id="ooption-1" class="lactose" onchange="populateListProductChoices('displayProduct')" checked>
+ <input type="radio" name="lactose" id="ooption-2" class="no-lactose" onchange="populateListProductChoices('displayProduct')">
+   <label for="ooption-1" class="option ooption-1">
+     <div class="dot"></div>
+      <span id="sp">Lactose</span>
+      </label>
+   <label for="ooption-2" class="option ooption-2">
+     <div class="dot"></div>
+      <span id="sp">sans lactose</span>
+   </label>
+</div>
+<br>
+<br>
+<div class="wrapper">
+ <input type="radio" name="organic" id="oooption-1" class="organic" onchange="populateListProductChoices('displayProduct')" checked>
+ <input type="radio" name="organic" id="oooption-2" class="no-organic" onchange="populateListProductChoices('displayProduct')">
+   <label for="oooption-1" class="option oooption-1">
+     <div class="dot"></div>
+      <span id="sp">bio</span>
+      </label>
+   <label for="oooption-2" class="option oooption-2">
+     <div class="dot"></div>
+      <span id="sp">sans bio</span>
+   </label>
+</div>
+<br>
+<br>
+<div class="wrapper">
+ <input type="radio" name="frozen" id="ooooption-1" class="frozen" onchange="populateListProductChoices('displayProduct')" checked>
+ <input type="radio" name="frozen" id="ooooption-2" class="no-frozen" onchange="populateListProductChoices('displayProduct')">
+   <label for="ooooption-1" class="option ooooption-1">
+     <div class="dot"></div>
+      <span id="sp">congelé</span>
+      </label>
+   <label for="ooooption-2" class="option ooooption-2">
+     <div class="dot"></div>
+      <span id="sp">non congelé</span>
+   </label>
+</div>
+
+  <br>
+  <br>
+  <div class="dropdown">
+  <button class="dropbtn">Police<i class="arrow down"></i></button>
+  <div class="dropdown-content">
+  <a style="cursor:pointer;font-size:18px;" value="18px" onclick="changeFont('18px')" >18px</a>
+  <a style="cursor:pointer;font-size:22px;" value="22px" onclick="changeFont('22px')" >22px</a>
+  <a style="cursor:pointer;font-size:24px;" value="24px" onclick="changeFont('24px')" >24px</a>
+  </div>
+</div>
+
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>aliments filtrés</h3>
+  <p>Voici les aliments disponibles selon vos préférences.</p>
+	 Choisissez les aliments que vous souhaitez acheter de la liste suivante:  
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Ajouter les éléments cochés au panier 
+	</button>
+</div>
+
+
+<div id="Cart" class="tabcontent">
+  <h3>Panier</h3>
+  <p>Voici votre panier.</p>
+  <div id="displayCart"></div>
+</div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+<footer id ="footer"> <p id="txt-footer">Par Mounir 3chiri</p>
+    </footer>
+    
+</html>
