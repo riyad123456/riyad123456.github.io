@@ -1,0 +1,60 @@
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.navbar bg-white text-dark p-3 my-3 {
+    border: 1px solid #dee2e6!important;
+}
+#title{
+    font-size:22px;
+}
+body{background-color: #DBEEFB;}
+#title:hover{
+    cursor: pointer;
+}
+#address{
+    transition:0.5s;
+}
+.collapse{
+    transition:1.5s;
+    background: #E6FFFE;
+    /* border-top: 0.5px solid grey; */
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+#address:hover{
+    color:green;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding:20px;
+}
+#home-button{
+    color:green;
+    border: 1px solid green;
+    border-radius: 10px;
+  
+}
+
+.collapse {
+    display:block;
+}
+#book{
+    margin-left:80%;
+    margin-bottom:20px;
+    margin-right: 30px;
+}
+
+#expert:hover{
+    border:1px solid grey;
+    transition: 0.5s;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+#date{
+    font-size:13px;
+    font-family:unset;
+}
