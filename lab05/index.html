@@ -1,0 +1,434 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="images/favicon.png">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    
+    <title>Physiotherapy Clinic Sandy Hill</title>
+</head>
+<body>
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div class = "container-lg">
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+
+    <nav class="navbar bg-white text-dark p-3 my-3 "  id="home-button">
+        <p id="title"><img src="images/favicon.png" width="100" height="100"> Physiotherapy Clinic Sandy Hill</p>
+        <p id="address" ><img src="images/location.png" width="45px" height="45px"class="rounded" style="margin-right:15px;">5 Ave Blackburn,<br> Ottawa, ON K1N 8A4<br> (343-976-1014)</p>
+        <p id="address"><img src="images/location.png" width="45px" height="45px"class="rounded" style="margin-right:15px;">218 Laurier Ave. E <br>Ottawa, ON K1N 6P2<br> (343-876-1322)</p>
+    </nav>
+    <div  class="bg-white p-4 " id="home-button-2">
+    <ul class="nav nav-pills nav-fill  " >
+        <li  class="nav-item" role="presentation">
+          <a id="mynavitem" href="#about-header" class="nav-link active" onclick="tgg(this)"><img src="images/hospital.png" style="margin-right:20px;" width="40px" height="40px"class="rounded" >About</a>
+        </li>
+        <li  class="nav-item" role="presentation">
+          <a id="mynavitem" href="#service-header" class="nav-link text-center" onclick="tgg(this)" ><img src="images/mental-health.png" style="margin-right:20px;" width="40px" height="40px"class="rounded" >Services</a>
+        </li>
+        <li  class="nav-item" role="presentation">
+          <a id="mynavitem" href="#expert-header" class="nav-link" onclick="tgg(this)" ><img src="images/expert.png" style="margin-right:20px;" width="40px" height="40px"class="rounded" >Experts</a>
+        </li>
+      </ul></div><br>
+       
+    <!--
+    https://getbootstrap.com/docs/4.0/components/alerts/
+    -->
+     <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Due to Covid-19 restrictions, We ask our customers to wear a mask at all times inside the clinic. We appreciate your cooperation!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="  my-3 border bg-light" id="about">
+        <h1 id="about-header" style="text-align:center;"><br>About us<div class="text-center">
+        <img src="images/hospital.png" width="70px" height="70px"class="rounded" >
+      </div><br></h1>
+        <!-- inspired from
+    https://www.physiocarephysiotherapy.com/
+    -->
+        <p class="p-4 my-3" style="font-size: 18px">When seeking physiotherapy services yоu wаnt tailored care, and with the rіght рhуѕіоthеrаріѕt. At Physiotherapy Clinic Sandy Hill , рhуѕiotherapy ѕеѕѕіоnѕ are held in a friendly environment wіth an experienced Rеgіѕtеrеd Phуѕіоthеrаріѕt whо hаѕ аdvаnсеd trаіnіng іn thеіr аrеа оf рrасtісе.
+
+</p>
+    </div>
+    <!--
+    https://getbootstrap.com/docs/4.0/components/collapse/#via-javascript
+    -->
+    <br>
+    <!-- service description inspired from 
+    https://www.physiocarephysiotherapy.com/Services#yoga
+    -->
+    
+    <div id="accordion">
+    
+  <div class="card">
+  <h1 id="service-header" style="text-align:center;"><br>Services<div class="text-center">
+        <img src="images/mental-health.png" width="70px" height="70px"class="rounded" >
+      </div><br></h1>
+    <nav class="navbar bg-white text-dark p-3 " id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn px-6" style="display:flex;"data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" onclick="collps(this,'125$')" aria-controls="collapseOne">
+          <img src="images/Therapy.png" width="30" height="30" style="margin-right:20px;">Aqua Therapy 
+        </button>
+      </h5>
+      <p  id="price"> 125$  </p>
+    </nav>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        Aquatic-therapy is treatments and exercises performed in water for relaxation, fitness or physical rehabilitation. Aqua-therapy has positive effects on pain, disability, and overall quality of life in people with knee and hip osteoarthritis, total knee replacement, total hip replacement, and after rotator cuff repair to improved function, range of motion, and decreased swelling.
+      </div>
+      <button type="button" class="btn btn-primary float-right" id="book" data-bs-toggle="modal" data-bs-target="#exampleModal">Book an appointment</button>
+    </div>
+  </div>
+  <div class="card">
+    <nav class="navbar bg-white text-dark p-3 " id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn " onclick="collps(this,'105$')" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <img src="images/Therapy.png" width="30" height="30" style="margin-right:20px;">Yoga Therapy
+        </button>
+      </h5>
+      <p  id="price"> 105$  </p>
+    </nav>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        Yoga Therapy empowers individuals to progress towards improved health and wellbeing through the teachings and practices of Yoga. The goal of Yoga Therapy is to eliminate, reduce and manage the cause of suffering, improving function, and helping to prevent re-occurrence of the underlying causes of an illness.
+      </div>
+      <button type="button" class="btn btn-primary float-right" id="book" data-bs-toggle="modal" data-bs-target="#exampleModal">Book an appointment</button>
+    </div>
+  </div>
+  <div class="card">
+    <nav class="navbar bg-white text-dark p-3 " id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn"  onclick="collps(this,'85$')" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <img src="images/Therapy.png" width="30" height="30" style="margin-right:20px;">Telerehab
+        </button>
+      </h5>
+      <p  id="price"> 85$  </p>
+    </nav>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+      Our LIVE Video Appointments make it super easy and convenient for you to get in touch with a physiotherapist without leaving the comfort of home.
+      </div>
+      <button type="button" class="btn btn-primary float-right" data-bs-toggle="modal" data-bs-target="#exampleModal" id="book" >Book an appointment</button>
+    </div>
+  </div>
+  <div class="card">
+    <nav class="navbar bg-white text-dark p-3 " id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn " onclick="collps(this,'70$')" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <img src="images/Therapy.png" width="30" height="30" style="margin-right:20px;">MVA (Motor Vehicle Accident)
+        </button>
+      </h5>
+      <p  id="price"> 70$  </p>
+    </nav>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+      The traumatic nature of a Motor Vehicle Accident (MVA) can result in a wide array of physical injuries and cognitive deficits. Rehabilitation of these elements begin with an in-depth evaluation by our qualified Physiotherapist to identify all the components of the injury. The treatment plan is designed to address all the issues identified in the assessment.
+      </div>
+      <button type="button" class="btn btn-primary float-right" id="book" data-bs-toggle="modal" data-bs-target="#exampleModal">Book an appointment</button>
+    </div>
+  </div>
+  <div class="card">
+    <nav class="navbar bg-white text-dark p-3 " id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn " onclick="collps(this,'65$')" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          <img src="images/Therapy.png" width="30" height="30" style="margin-right:20px;">Arthritis Care
+        </button>
+      </h5>
+      <p  id="price"> 65$  </p>
+    </nav>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+      The main goal of treatment is to reduce the amount of pain you are experiencing and prevent additional damage to the joints. Improving your joint function is also important. Physical therapy involving exercises that help strengthen the muscles around the affected joint is a core component of arthritis treatment.
+      </div>
+      <button type="button" class="btn btn-primary float-right" id="book" data-bs-toggle="modal" data-bs-target="#exampleModal">Book an appointment</button>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+    
+
+    
+
+    <!-- Button trigger modal
+    We use the same button code from above, but now we can trigger a modal to appear.
+    The bootstrap tutorial includes many different types of modals that you can explore
+    https://getbootstrap.com/docs/5.0/components/modal/
+    -->
+    
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+<div id="w-100" style="background:white;">
+   <h1 id="expert-header" style="text-align:center;"><br>Meet Our Experts<div class="text-center">
+        <img src="images/expert.png" width="70px" height="70px"class="rounded" >
+      </div><br></h1><br>
+    
+    <div class="d-flex justify-content-around">
+    <div id="expert" class="card" style="width: 18rem;">
+  <img class="card-img-top" src="images/doctor1.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <p class = "text-center" style="border-bottom: 1px solid grey;"><strong>Caroline Tanner</strong><br> (Physiotherapy Resident)</p>
+    <!-- inspired from
+    https://med.uottawa.ca/en/people/stintzi-alain
+    -->
+    <p> Dr. Caroline Tanner obtained here PhD in Physiotherapy at the Louis-Pasteur University in France (1997). She was subsequently a Postdoctoral fellow in the Department of Chemistry, University of California at Berkeley.
+
+
+  </div>
+</div>
+<div id="expert"class="card" style="width: 18rem;">
+  <img class="card-img-top" src="images/doctor2.jpeg" alt="Card image cap">
+  <div class="card-body">
+  <!-- inspired from
+    https://med.uottawa.ca/en/people/hendry-paul
+    -->
+    <p class = "text-center" style="border-bottom: 1px solid grey;"><strong>Max Willer</strong><br>Registered Physiotherapist</p>
+    <p>Dr. Max earned his MD from the University of Ottawa in 1981, where he completed his Residency Training in Cardiovascular and Thoracic Surgery. During that time, he completed an MSc in Physiotherapy. A year later, he was certified as a Fellow of the Royal College of Physicians and Surgeons of Canada (FRCPC) in physiotherapy.</p>
+  </div>
+</div>
+<div class="card" id="expert" style="width: 18rem;">
+  <img class="card-img-top" src="images/doctor3.jpeg" alt="Card image cap">
+  <div class="card-body">
+  <!-- inspired from
+    https://med.uottawa.ca/en/people/hendry-paul
+    -->
+    <p class = "text-center" style="border-bottom: 1px solid grey;"><strong>Anna Stocking</strong><br>Registered Physiotherapist, C/NDT</p>
+    <p>Dr. Anna Stocking graduated from the MD program at the University of Ottawa in 1997. She went on to pursue studies in Physiotherapy at Montfort Hospital and completed her residency there in 1999. </p>
+  </div>
+</div>
+</div>
+<br><br><br>
+</div><br>
+<br><br><br>
+   
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><h5 class="modal-title" id="exampleModalLabel"><img src="images/user.png" width="45px" height="45px"class="rounded" style="margin-right:15px;">Client information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body" id="modal-profile">
+                  <div class="alert alert-danger " id="inputerror" role="alert">
+                      <strong>Error:</strong><br><p  id="errorContent"></p>
+                  </div>
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">First name:</label><br>
+                        <input type="text" class="form-control" id="firstname" title="Enter your first name" required >
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Last name:</label><br>
+                        <input type="text" class="form-control" id="lastname" title="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address:</label><br>
+                        <input type="email" class="form-control" id="email" required title="Please provide your email, so that we can send updates about our clinic">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Phone number:</label><br>
+                        <input type="text" class="form-control" id="phonenumber" required title="Please provide your phone, so that we can contact you if needed">
+                    </div>
+                    <div class="form-group" >
+                    <label for="exampleFormControlInput1">Date:</label><br>
+                    <input id="datepicker" width="276" title="Please choose a date for your appointment" required readonly="readonly"/>
+                    </div>
+                    <div class="form-group" >
+                    <label for="formGroupExampleInput2">Hour:</label><br>
+                    <select class="form-select" title="Please choose a time for your appointment" id="time"aria-label="Default select example" required>
+                        <option selected>8 AM</option>
+                        <option value="1">10 AM</option>
+                        <option value="2">12 AM</option>
+                        <option value="3">2 PM</option>
+                        <option value="2">4 PM</option>
+                        <option value="3">6 PM</option>
+                    </select>
+                    </div>
+                    <div class="form-group" >
+                    <label for="formGroupExampleInput2">Expert:</label><br>
+                    <select class="form-select" id="expert-select" required title="We ask you to choose an expert, so that we can provide flexibilty and satisfaction to our customers" aria-label="Default select example">
+                        <option selected>Caroline Tanner</option>
+                        <option value="2">Max Willer</option>
+                        <option value="3">Anna Stocking</option>
+                    </select>
+                    </div>
+                    <div class="alert alert-primary" id="expert-availability-alert" role="alert">
+                    </div>
+                          
+                           
+                            
+                           
+                
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    Please note that your appointement will be cancelled if you show up 15 minutes or more late.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div><br>
+                    Have you had any Covid-19 Symptoms in the last 14 days?
+                    <div class="form-check" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked required>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            No
+                        </label>
+                    </div>
+                    </form>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary"   onclick="validateInputs(this)" >Save & Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+  <div class="modal fade" id="PaymentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><img src="images/creditcard.png" width="45px" height="45px"class="rounded" style="margin-right:15px;">Payment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body" >  
+                    <div class="alert alert-danger " id="inputerror1" role="alert">
+                          <strong>Error:</strong><br><p  id="errorContent1"></p>
+                      </div>
+                     <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Expiry Date:</label><br>
+                        <input type="text" class="form-control" id="Expiry" id="dateInput" title="Enter the expiry date of your credit card eg. '01/25'"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Name:</label><br>
+                        <input type="text" class="form-control" id="CreditCardName" title="Enter the name in your credit card"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Credit card number:</label><br>
+                        <input type="text" class="form-control"  id="debit"  title="We ask for your credit card (Visa) number in case of no-show, 20$ will be charged."></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">CVV:</label><br>
+                        <input type="text"  class="form-control" id="CVV" title="Enter the 3-digit number in the back of your card"></input>
+                    </div>
+                    </form>
+                </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal" >Back</button>
+                    <button type="button" class="btn btn-primary" onclick="validatePayment(this)">Make payment</button>
+                </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  
+<div class="modal fade" id="succesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">  
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Your appointement was booked succesfully!
+                    </div>   
+                    <table class="table">
+                      <thead>
+
+                      </thead>
+                      <tbody >
+                        <tr>  
+                          <td>Name:</td>
+                          <td id="table-name"></td>
+                        </tr>
+                        <tr>
+                          <td>Email:</td>
+                          <td id="table-email"></td>
+                        </tr>
+                        <tr>
+                          <td >Phone number:</td>
+                          <td id="table-phonenumber"></td>
+                        </tr>
+                        <tr>
+                          <td >Date:</td>
+                          <td id="table-date"></td>
+                        </tr>
+                        <tr>
+                          <td >Service:</td>
+                          <td id="table-service"></td>
+                        </tr>
+                        <tr>
+                          <td >Expert:</td>
+                          <td id="table-expert"></td>
+                        </tr>
+                        <tr>
+                          <td >Price:</td>
+                          <td id="table-price"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+</div>
+</div>
+
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  
+</body>
+<script src="Scripts/myscript.js"></script>
+<script src="Scripts/utils.js"></script>
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
+<link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet"
+        type="text/css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+</html>
