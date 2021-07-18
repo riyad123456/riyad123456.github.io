@@ -195,7 +195,7 @@ function validateInputs(elem){
     }
 }
 function validatePayment(elem){
-    //TODO: 
+    //TODO:
     var  errorMessage = "";
     if($("#debit").val === ""){ errorMessage += `* ${error['emptycreditcardError']}<br/>`}
     else if(!validateCreditCardNumber("debit")){errorMessage += `* ${error['creditcardError']}<br/>`}

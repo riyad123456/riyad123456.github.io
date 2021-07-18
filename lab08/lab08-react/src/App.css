@@ -1,0 +1,118 @@
+html{
+  background-color: rgb(34,34,34);
+}
+.App {
+  text-align: center;
+  color: white;
+}
+#saveandcontinue{
+  float:right;
+  
+}
+.Create,.View{
+  color: white;
+  background-color: rgb(34,34,34);
+}
+#card-1{
+  background-color: #FDF2E9;
+}
+#about,#contact{
+  color:black;
+}
+.Home{
+  background-color: rgb(34,34,34);
+}
+#container-view{
+  margin-right: auto;
+  margin-left: auto;
+  padding:30px;
+}
+#card-header{
+  background-color: white;
+}
+#menuelem{margin: 0px 20px 0px 20px;}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+#home,#profile,#contact,#view-content{
+margin-top:30px;
+width:80%;
+margin-right:auto;
+margin-left:auto;
+
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+#title{
+  color: white;
+  font-size: 25px;
+}
+#cardcontainer, #cardcontainer-2{
+  background-color: rgb(39, 38, 39);
+  color:white;
+}
+#logo{
+  width: 35px;
+  height: 35px;
+}
+#get{
+  height:600px;
+  justify-content: center;
+  padding-top: 200px;
+}
+#mynav{
+  padding: 20px;
+  position: sticky;
+    /*top: 20px;*/
+    top:0px;
+    overflow:hidden;
+    z-index:2;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    background-color: rgb(34,34,34);
+    color: white;
+    border-bottom: 0.4px solid white;
+}
+#cardcontainer-2{
+  height:400px;
+}
+#cardtext{
+  font-size: 25px;
+  font-weight: bold;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Create {
+  color: white;
+  background-color: rgb(34,34,34);
+  height: 100%;
+}
+
+#title{
+  color: white;
+  font-size: 25px;
+}
